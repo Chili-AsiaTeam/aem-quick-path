@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "Chili Media - AEM 快捷资源直通插件",
+  "version": "3.0",
+  "description": "在 Chili 编辑器内直接对接 AEM 数据库，实现快速检索、一键填图与快捷路径管理",
+  "permissions": [
+    "storage",
+    "activeTab"
+  ],
+  "host_permissions": [
+    "*://*/*"
+  ],
+  "content_scripts": [
+    {
+     "matches": [
+        "*://chiligrafx.com/environments/*/studio/templates/*",
+        "*://chiligrafx-dev.com/environments/*/studio/templates/*",
+        "*://chiligrafx-main.com/environments/*/studio/templates/*",
+        "*://chili-publish.online/environments/*/studio/templates/*",
+        "*://chiligrafx.com/environments/*/studio/components/*",
+        "*://chiligrafx-dev.com/environments/*/studio/components/*",
+        "*://chiligrafx-main.com/environments/*/studio/components/*",
+        "*://chili-publish.online/environments/*/studio/components/*",
+        "*://*.kadanza.io/*/extensions/grafx/*"
+      ],
+      "js": ["content.js"],
+      "css": ["styles.css"]
+    }
+  ]
+}
